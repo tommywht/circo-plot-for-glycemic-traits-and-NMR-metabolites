@@ -1,4 +1,5 @@
 # circo plots ----------------------
+## scripts modified from "EpiViz" package: https://github.com/mattlee821/EpiViz
 library(tidyverse)
 library(circlize)
 library(ComplexHeatmap)
