@@ -1,10 +1,9 @@
-# creating all plots 
 # circo plots ----------------------
 library(tidyverse)
 library(circlize)
 library(ComplexHeatmap)
 
-setwd("C:/Users/Tommy Wong/Desktop/glycemic traits MR")
+setwd("glycemic traits MR")
 
 ## circo plot
 circo_plot <- function(dat, var){start_degree = 90
@@ -402,7 +401,7 @@ dat <- full_join(dat, nmrgroup, by = c("outcome" = "Title")) %>%
   mutate(across(c(Group, Subgroup), .fns = function(x){factor(x, ordered = FALSE)})) %>%
   dplyr::filter(Subgroup != "Glucose")
 
-circo_plot(dat, var = "testing")
+circo_plot(dat, var = "fasting glucose")
 
 #### circo plot 2hr glucose===============
 dat <- readRDS("mr results/fulldat_2hglu.rds") %>%
